@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-color: rgb(123, 187, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row; 
+    transition: transform 0.3s ease;
+}
+
+.searchBar:hover {
+    transform: scale(1.1);
+}
+
+.anything {
+    background-color: white;
+    height: 2.5rem;
+    width: 30vw;
+    border-radius:0px  20px 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem; 
+}
+
+.Shead {
+    width: 25vw;
+    height: auto;
+    border: none;
+    outline: none;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    padding-left: 3rem;
+}
+
+.fas {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.fas:hover {
+    transform: scale(1.2);
+}
+
+.everything {
+    background-color: rgb(155, 72, 86);
+    height: 2.5rem;
+    width: 7vw;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.everything:hover {
+    transform: scale(1.1);
+}
+
+.everything-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: rgb(155, 72, 86); */
+}
+
+.Ehead {
+    padding: 12px;
+    padding-left: 20px;
+    border: none;
+    background-color: rgb(155, 72, 86);
+    color: white;
+    border-radius: 20px 0px 0px 20px;
+    font-weight: 500;
+}
+
+.Ehead:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.Ehead:active + .everything-accordion {
+    display: flex;
+}
+
+.Symbol {
+    border: none;
+    padding: 14px;
+    font-weight: 600;
+    background-color: rgb(155, 72, 86);
+    color: white;
+    border-radius:0 20px 20px 0;
+}
+
+.Symbol:hover {
+    cursor: pointer;
+}
+
+.Symbol:active {
+    background-color: rgb(221, 156, 167);
+}
+
+.everything-accordion {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 2.8rem; /* Adjusted for smaller screens */
+    left: 0;
+    width: 90vw; /* Full width */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0.2rem;
+}
+
+.everything-accordion span {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.everything-accordion span:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.everything:hover .everything-accordion {
+    display: flex;
+    cursor: pointer;
+}
+
+.Symbol:active + .everything-accordion {
+    display: flex;
+    cursor: pointer;
+}
+
+/* Responsive Font Size and Element Size */
+@media (min-width: 200px) and (max-width: 479px){
+    .anything {
+        width: 65vw; /* Adjusted width */
+    }
+
+    .Shead {
+        width: 47vw; /* Adjusted width */
+        font-size: 0.6rem; /* Adjusted font size */
+        padding-left: 6.4rem;
+    }
+
+    .fas {
+        font-size: 1rem; /* Adjusted font size */
+    }
+
+    .everything {
+        width: 13vw; /* Adjusted width */
+        height: 2.8rem; /* Adjusted height */
+        left: 2rem; /* Adjusted positioning */
+    }
+
+    .everything-accordion {
+        width: 15vw; /* Adjusted width */
+    }
+    .everything-accordion span {
+        font-size:1.5vw ;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+    .anything {
+        width: 30vw; /* Adjusted width */
+    }
+
+    .Shead {
+        width: 25vw; /* Adjusted width */
+        font-size: 0.7rem; /* Adjusted font size */
+        padding-left: 3rem;
+    }
+
+    .fas {
+        font-size: 1rem; /* Adjusted font size */
+    }
+
+    .everything {
+        width: 10vw; /* Adjusted width */
+        height: 2.8rem; /* Adjusted height */
+        left: 3rem; /* Adjusted positioning */
+    }
+
+    .everything-accordion {
+        width: 20vw; /* Adjusted width */
+    }
+    .everything-accordion span {
+        font-size:1.5vw ;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+    .everything-accordion span {
+        font-size: 0.8vw;
+    }
+    .anything {
+        width: 35vw; /* Adjusted width */
+        height: 2.8rem; /* Adjusted height */
+    }
+
+    .Shead {
+        width: 30vw; /* Adjusted width */
+        font-size: 1rem; /* Adjusted font size */
+        padding-left: 6rem;
+    }
+
+    .fas {
+        font-size: 1.5rem; /* Adjusted font size */
+    }
+
+    .everything {
+        width: 10vw; /* Adjusted width */
+        height: 2.8rem; /* Adjusted height */
+        left: 3rem; /* Adjusted positioning */
+    }
+
+    .everything-accordion{
+        width: 20vw; /* Adjusted width */
+    }
+}
+
+@media (min-width:1200px){
+    .everything-accordion {
+        width: 13vw; /* Adjusted width */
+    }
+    .everything-accordion span {
+        font-size:1.3vw ;
+    }
+    .everything-accordion span {
+        font-size: 1vw;
+    }
+}
+
+
